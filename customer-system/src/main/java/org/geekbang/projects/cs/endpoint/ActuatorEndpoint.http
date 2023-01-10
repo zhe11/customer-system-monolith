@@ -18,10 +18,6 @@ GET localhost:8081/actuator/customerStaff/13355667790
 Content-Type: application/json
 ###
 
-POST localhost:8081/actuator/customerStaffCount/13355667790
-Content-Type: application/json
-###
-
-GET localhost:8081/actuator/customerStaffCount/13355667790
+POST localhost:8081/actuator/customerStaffCount/133556677901
 Content-Type: application/json
 ###

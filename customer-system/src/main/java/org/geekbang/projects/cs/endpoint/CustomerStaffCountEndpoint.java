@@ -34,16 +34,14 @@ public class CustomerStaffCountEndpoint implements InitializingBean {
     }
 
     @WriteOperation
-    public void addCustomerCount(@Selector String arg0){
+    public Map<String, Object> addCustomerCount(@Selector String arg0){
         customCounter.increment(arg0);
-    }
-
-    @ReadOperation
-    public Map<String, Object> getCustomerCount(@Selector String arg0){
         double count = customCounter.getCount(arg0);
         Map<String,Object> map=new HashMap<>();
         map.put("count",count);
         return map;
     }
+
+
 
 }
