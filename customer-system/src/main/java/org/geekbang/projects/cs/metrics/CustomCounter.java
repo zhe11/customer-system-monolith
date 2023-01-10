@@ -31,6 +31,8 @@ public class CustomCounter {
     }
 
     public double getCount(String tagValue) {
-        return counters.get(tagValue).count();
+        Counter counter = counters.get(tagValue);
+        if(counter==null) return 0;
+        return counter.count();
     }
 }
